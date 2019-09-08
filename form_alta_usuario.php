@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	
 	require_once("gestionBD.php");
 
 	// Si no existen datos del formulario en la sesión, se crea una entrada con valores por defecto
@@ -16,8 +15,9 @@
 		$_SESSION['formulario'] = $formulario;
 	}
 	// Si ya existían valores, los cogemos para inicializar el formulario
-	else
+	else{
 		$formulario = $_SESSION['formulario'];
+	}
 	if (isset($_SESSION['errores'])) {
 		$errores = $_SESSION['errores'];
 	}
@@ -100,7 +100,7 @@
 				</div>
 		
 				<div class="inputform">
-					<label for="pass">Conraseña:<em>*</em></label>
+					<label for="pass">Contraseña:<em>*</em></label>
 	                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres entre letras y dígitos"
 	                oninput = "passwordConfirmation()" required/>
 				</div>

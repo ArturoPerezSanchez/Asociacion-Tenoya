@@ -4,7 +4,6 @@
 	// Importar librerías necesarias
 	require_once("gestionBD.php");
 
-
 	// Comprobar que hemos llegado a esta página porque se ha rellenado el formulario
 	if (isset($_SESSION["formulario"])) {
 		// Recogemos los datos del formulario
@@ -26,17 +25,20 @@
 	// Guardar la variable local con los datos del formulario en la sesión.
 	$_SESSION["formulario"] = $nuevoUsuario;
 
-
 	// Validamos el formulario en servidor
 	// Si se produce alguna excepción PDO en la validación, volvemos al formulario informando al usuario
 		$conexion = crearConexionBD();
 		$errores = validarDatosUsuario($conexion, $_SESSION["formulario"]);
-		$errores = existeUsuario($conexion,$nuevoUsuario["usuario"],$nuevoUsuario["dni"]);
+		if(!isset($errores)){
+			$errores = existeUsuario($conexion,$nuevoUsuario["usuario"],$nuevoUsuario["dni"]);
+		}
+
 		if(isset($errores)){
 			$_SESSION["errores"] = $errores;
 			Header('Location: form_alta_usuario.php');
 		} else {
 			Header('Location: exito_alta_usuario.php');
+
 		}
 	
 	
@@ -76,9 +78,13 @@ function validarDatosUsuario($conexion, $nuevoUsuario){
 	}else if($nuevoUsuario["pass"] != $nuevoUsuario["confirmpass"]){
 		$errores = "<p>Las contraseñas no coinciden</p>";
 	}
+		
 	return $errores;
 }
-	
+
+///////////////////////////////////////////////////////////
+// Comprobación en servidor de que el usuario no existe
+///////////////////////////////////////////////////////////
 function existeUsuario($conexion,$usuario,$dni) {
  	$consulta = "SELECT COUNT(*) AS TOTAL FROM Persona WHERE USUARIO=:usuario OR DNI=:dni";
 	$stmt = $conexion->prepare($consulta);

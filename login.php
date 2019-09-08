@@ -3,7 +3,7 @@
   	include_once("gestionBD.php");
  	include_once("gestionarUsuarios.php");
 	if(isset($_SESSION['login'])){
-	Header("Location: index.php");
+		Header("Location: index.php");
 	}
 	if (isset($_POST['submit'])){
 		$usuario= $_POST['usuario'];
