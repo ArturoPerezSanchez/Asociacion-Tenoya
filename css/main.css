@@ -1,0 +1,213 @@
+/* Mensajes de Error */
+div.error, div.excepcion {
+	color: red;	
+	border: 2px solid red;
+	padding: 10px;
+	margin: 10px;
+	background: #ff9999
+}
+
+.error img{
+	width: 40px;
+	vertical-align: middle;
+}
+
+
+body{
+	background-color: #dddddd;
+	font-size: 20px;
+	font-family: Tahoma, Geneva, sans-serif;
+	background: url("../images/background.png") no-repeat center center fixed;
+	background-size: cover;
+	color: #ffffff;
+	margin-left:2em;
+	margin-right:2em;
+
+}
+
+footer{
+	border-top: 1px solid black;
+	text-align:center;
+	clear: both;
+	margin-top: 1%;
+}
+
+.banner{
+	width: 40%;
+	display:block;
+	margin: auto;
+}
+
+.button {
+	background-color:#79bbff;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.button:hover {
+	background-color:#378de5;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.login{
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 400px;
+	display: block;
+}
+
+.login label{
+	display: inline-block;
+}
+
+.login input {
+	display: inline-block;
+	float:right;
+	width: 50%;
+}
+.login .loginbutton{
+	width: 100%;
+	margin-top: 15px;
+}
+
+.singupform{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 40%;
+	display: block;
+}
+
+.singupform label{
+	display: inline-block;
+}
+
+.singupform input {
+	display: inline-block;
+	float:right;
+	width: 200px;
+}
+.inputform {
+	margin-bottom: 5px;
+}
+.sexo{
+	text-align: center;
+	width: 100%;
+}
+.sexo .sexOption{
+	width: 100%;
+	text-align: center;
+}
+
+
+
+div.editar_input{
+	display: inline-flex;
+}
+
+
+main nav{
+	clear: left;
+	border-bottom: 5px solid #b43838;
+	padding-bottom: 1%;
+}	
+
+.datos_a_paginar{
+	float: left; 
+	width: 75%;  
+	padding-top: 1%;
+	padding-bottom: 1%;
+	border-top: 2px #C0A7A7 solid;
+}
+
+#botones_fila {
+	float:right; 
+	vertical-align: middle;
+	width: 23%;
+	border-top: 2px #C0A7A7 solid;
+}
+
+nav a, span{
+	background-color: #ccccff;
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+}
+nav span:hover{
+	background-color: #8888ff;
+}
+nav a:hover{
+	cursor:pointer;
+	background-color: #8888ff;
+}
+
+
+
+.editar_fila{
+	width: 35%;
+	border:0;
+	margin:3px;
+	background-color: transparent;
+	float: center;
+	cursor: pointer
+
+}
+
+.inicio1{
+	width: 10%;
+	height: auto;
+	text-align: middle;
+	float: left;
+    margin: 1%;
+}
+.inicio2{
+	width: 10%;
+	height: auto;
+	text-align: middle;
+    margin: 1%;
+	float:right;
+}
+
+@media screen and (max-width:1200px) {
+	.singupform{
+		width: 72%;
+	}
+}
+
+@media screen and (max-width:682px) {
+	.banner{
+		width: 80%;
+		display:block;
+		margin: auto;
+	}
+
+	.login{
+		width: 100%;
+	}
+	.singupform{
+		width: 100%;
+	}
+	.singupform input{
+		display: block;
+		float:left;
+		width: 100%;
+	}
+	.singupform label{
+		display: block;
+		width: 100%;
+	}
+
+}
+
+

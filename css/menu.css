@@ -1,0 +1,92 @@
+
+/* ----------------------------------------------- */
+/* --------------- Responsive menu ---------------*/
+/* -----------------------------------------------*/
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+   	padding-left: 0px;
+    overflow: hidden;
+    background-image: linear-gradient(0deg, #acb6e5, #74ebd5);
+    width: 100%;
+    border: 2px #8888ff solid;
+    display: flex;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    top: 10px;
+    position: sticky;
+}
+
+ul.topnav li {
+	text-align: center;
+	width: 100%;
+	padding: 1%;
+	transition: 2s;
+}
+ul.topnav li a {
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    padding: 10px 5%;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+
+}
+
+/* Cambiar el color del fondo al pasar el mouse por encima */
+ul.topnav li:hover {
+	background-image: linear-gradient(0deg, #74ebd5, #acb6e5);
+	cursor: pointer;
+}
+
+ul.topnav li:active {
+  position:relative;
+  top: 2px;
+  cursor: pointer;
+}
+
+.singup{
+    float: right;
+    display: inline-block;
+}
+
+/* Esconder el boton de la lista*/
+ul.topnav li.icon {
+  display: none;
+}
+
+/* Cuando la pantalla es menor de 680 pixeles, esconder todos los items menos el home*/
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+
+  ul.topnav li.icon{
+    float: right;
+    display: inline-block;
+  }
+
+  ul.topnav li.singup{
+    float: right;
+    display: inline-block;
+  }
+
+  ul.topnav{
+    height: 50px;
+    transition: 1s;
+  }
+
+  ul.topnav.responsive{
+    display: block;
+    height: 240px;
+  }
+
+  ul.topnav.responsive li{
+    display: block;
+    padding: 0;
+    height: 40px;
+  }
+
+}
