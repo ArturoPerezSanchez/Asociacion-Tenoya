@@ -201,8 +201,8 @@
 						<!-- mostrando título -->
 
 						<div class="NOMBRE"><b><?php echo $fila["NOMBRE"]; ?></b></div><em>
-						<div class="FECHA_INICIO">Fecha inicio : <?php echo $fila["FECHA_INICIO"]; ?></div>
-						<div class="FECHA_FIN">Fecha fin (mm/dd/yy): <?php echo $fila["FECHA_FIN"]; ?></div></em>
+						<div class="FECHA_INICIO">Fecha inicio: <?php echo $fila["FECHA_INICIO"]; ?></div>
+						<div class="FECHA_FIN">Fecha fin: <?php echo $fila["FECHA_FIN"]; ?></div></em><br>
 						<?php if (isset($fila["Destino"]) || isset($fila["PLAZAS_MAX"]) || isset( $fila["Precio"])) { ?>
 	 						<fieldset>
    							<legend>Viaje</legend>
@@ -217,7 +217,7 @@
 
 
 
-				<div id="botones_fila">
+				<!-- <div id="botones_fila">
 
 				<?php if (isset($evento) and ($evento["OID_EV"] == $fila["OID_EV"]) and esadmin($conexion, $_SESSION['login'])) { ?>
 
@@ -264,24 +264,13 @@
 
 					</button>
 <?php } ?>
-				</div>
+				</div> -->
 
 			</div>
 
 		</form>
 
 	</article>
-
-
-
-	<?php } 
-
-if(esadmin($conexion, $_SESSION['login'])){ ?>
-		
-	<button  id="crear" value="crear"  name="crear" class="editar_fila" onclick="location.href = 'formulario_crear_evento.php';">
-	<img src="images/add.png" class="editar_fila" style="width: 50px;"alt="Nuevo evento">
-	</button>
-
 
 					<?php } 
 	?>
